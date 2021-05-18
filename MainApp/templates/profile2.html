@@ -1,0 +1,34 @@
+{% extends 'profile.html' %}
+{% load static %}
+{% block title %}
+<title xmlns="http://www.w3.org/1999/html">Profile 2</title>
+{% endblock %}
+{% block body %}
+<div class="container">
+    <div class="row">
+        <div class="col-lg-4"><br><br><br><br><br><br><br><br><br><br><br><br>
+            <button><a href="/editprofile/"><i class="fas fa-pen "> Edit Profile</i></a></button><hr>
+            <h3><a class="text-blue"><i class="fas fa-envelope-open-text "> Email</i></a></h3>
+            <h3><a class="text-blue"><i class="fas fa-graduation-cap"> Education</i></a></h3>
+            <h3><a class="text-blue"><i class="fas fa-home"> Current City/Town</i></a></h3>
+            <h3><a class="text-blue"><i class="fas fa-map-marker-alt"> Home City/Town</i></a></h3>
+            <h3><a class="text-blue"><i class="fas fa-heart"> Relationship</i></a></h3>
+            <h3><a class="text-blue"><i class="fas fa-venus-double"> Gender</i></a></h3>
+            <h3><a class="text-blue"><i class="fas fa-birthday-cake"> DOB</i></a></h3>
+        </div>
+        <div class="col-lg-6"><br>
+             <img src="{{User.img.url}}" class="rounded-circle" alt="Cinque Terre" width="304" height="236"><br><br>
+            <h3 class="text-capitalize"><b>{{User.firstname}} {{User.surname}}</b></h3><hr>
+            <h3><i>{{User.email}}</i></h3>
+            <h3><i>{{User.qualification}}</i></h3>
+            <h3><i>{{User.currenttown}}</i></h3>
+            <h3><i>{{User.hometown}}</i></h3>
+            <h3><i>{{User.relationship}}</i></h3>
+            <h3><i>{{User.gender}}</i></h3>
+            <h3><i>{{User.dob}}</i></h3>
+        </div>
+        
+    </div>
+    
+</div>
+{% endblock%}
